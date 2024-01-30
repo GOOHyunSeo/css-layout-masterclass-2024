@@ -1,113 +1,118 @@
 @import "./reset.scss";
 
+$grey: #c6caca;
+
 body {
-  background-color: #dce6d1;
+  background-color: $grey;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .phone {
-  overflow-y: scroll;
-  background-color: black;
-  border-radius: 30px;
+  width: 480px;
   height: 95%;
-  width: 420px;
   //margin: 0 auto;
-  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 40px rgba($color: black, $alpha: 0.5);
+  //margin: 30px;
   box-sizing: border-box;
 }
 
 .header {
-  overflow-x: scroll;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0px;
+  padding: 0px 20px;
+  font-size: 18px;
+  .header__title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
 
-  .header__list {
-    display: flex;
-    color: white;
-    //justify-content: space-between;
-    gap: 10px;
-    width: max-content;
-    .header__list-item {
-      border: 1px solid rgba($color: white, $alpha: 0.8);
-      border-radius: 20px;
-      padding: 10px;
-    }
-    .header__list-item--inverted {
-      background-color: white;
-      color: black;
+.total {
+  background-color: #1f1414;
+  color: $grey;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: bold;
+  gap: 10px;
+  .total__price {
+    font-size: 25px;
+  }
+  .total__count {
+    font-size: 16px;
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: $grey;
+  color: #1f1414;
+  .item {
+    border-top: 4px solid black;
+    position: relative;
+    .item__info {
+      background-color: #d7dbdb;
+      padding: 25px 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      //justify-content: space-between;
+      align-items: flex-start;
+      .item__info-col {
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &:nth-child(2) {
+          align-items: flex-end;
+        }
+      }
+      .item__title,
+      .item__total-price {
+        font-size: 40px;
+        text-transform: uppercase;
+      }
+      .item__subtitle,
+      .item__piece-price {
+        font-size: 17px;
+      }
     }
   }
 }
 
-@mixin card($bgColor) {
-  background-color: $bgColor;
-  // padding: 15px 10px;
-  // border-radius: 10px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-around;
-  // gap: 40px;
-}
-
-.cards {
-  margin: 20px 0px;
+.item__specs {
+  background-color: #d7dbdb;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  //grid-template-rows: repeat(4, 1fr);
-  gap: 10px;
-  .cards__card {
-    padding: 15px 10px;
-    border-radius: 10px;
+  grid-template-columns: repeat(auto-fill, 150px);
+  .spac {
+    padding: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 40px;
-    background-color: white;
-    .card__title {
-      font-size: 24px;
-    }
-    .card__footer {
-      font-size: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      span {
-        border: 1px solid black;
-        border-radius: 20px;
-        padding: 5px;
-      }
-      .price {
-        background-color: rgb(255, 221, 44);
-      }
-      .length {
-        background-color: white;
-      }
-    }
     &:first-child {
-      @include card(#292d33);
-      border: 1px solid rgba($color: white, $alpha: 0.8);
-      .card__title {
-        color: white;
-      }
-    }
-    &:nth-child(2) {
-      @include card(#f5f4ef);
-    }
-    &:nth-child(3) {
-      @include card(#f8fcb5);
-    }
-    &:nth-child(4) {
-      @include card(#b19ff6);
-    }
-    &:nth-child(5) {
-      @include card(#fed3d3);
-    }
-    &:nth-child(6) {
-      @include card(#d0fedf);
-    }
-    &:nth-child(3n) {
-      grid-column: span 2;
+      border-right: 4px solid black;
     }
   }
+}
+
+.item__photo {
+  position: absolute;
+  width: 35%;
+  height: 65%;
+  border: 4px solid black;
+  right: 20px;
+  bottom: 0px;
+  object-fit: cover;
 }
