@@ -7,62 +7,53 @@
     <title>CSS Layout Masterclass</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="header__nav">
-        <ul>
-          <li class="header__tab">Menu</li>
-          <li class="header__tab">Best Sellers</li>
-          <li class="header__tab">Hand Sanitizer</li>
-          <li class="header__tab">Hand Cream</li>
-          <li class="header__tab">Refills</li>
-          <li class="header__tab">HAAN</li>
-          <li class="header__tab">Toothpaste</li>
-          <li class="header__tab">Hand Soap</li>
-          <li class="header__tab">Combos</li>
-          <li class="header__tab">😀</li>
-          <li class="header__tab">🛒</li>
-        </ul>
-      </nav>
-      <div class="header__breadcrumbs">
-        <span class="header__crumb">Home /</span>
-        <span class="header__crumb">Catalog /</span>
-        <span class="header__crumb">Hand Soap /</span>
-        <span class="header__crumb">Sunset Fleur</span>
-      </div>
-    </header>
-    <section class="product">
-      <div class="product__img">
-        <!-- <img src="https://source.unsplash.com/random" /> -->
-      </div>
-      <div class="product__info">
-        <div class="product__header">
-          <span class="product__category">Hand Soap</span>
-          <h1 class="product__title">Sunset Fleur</h1>
-          <div class="product__add-to-cart">
-            <div class="product__qty">
-              <span class="product__plus">➖</span>
-              <span class="product__total-qty">1</span>
-              <span class="product__minus">➕</span>
+    <div class="wrapper">
+      <div class="grid">
+        <header class="header">
+          <div class="header__top">
+            <span class="header__review">4.98</span>
+            <span class="header__label">best reviews</span>
+          </div>
+          <h1 class="header__title">dah!</h1>
+          <h3 class="header__subtitle">
+            Css grid is awesome and we love it because we can make many things.
+          </h3>
+        </header>
+        <div class="subgrid">
+          <div class="grid__img"></div>
+          <nav>
+            <ul>
+              <li class="nav__item">about</li>
+              <li class="nav__item">solution</li>
+              <li class="nav__item">portfolio</li>
+              <li class="nav__item">blog</li>
+            </ul>
+            <span class="nav__cta">hire us</span>
+          </nav>
+          <div class="grid__cells">
+            <div class="grid__cell">
+              <span>recent collabs</span>
             </div>
-            <span class="product__price">11,90$</span>
+            <div class="grid__cell">
+              <span>cbp</span>
+            </div>
+            <span class="grid__cell-cta">more cases</span>
           </div>
+          <div class="grid__img"></div>
         </div>
-        <div class="product__footer">
-          <div class="product__description">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-              quam eaque deserunt. Ullam, dignissimos corrupti officia
-              voluptatum facilis iusto accusamus! Dolorum excepturi quae placeat
-              quasi ex magni assumenda ullam blanditiis.
-            </p>
-          </div>
-          <div class="product__faq">
-            <div class="product__question">How to use<span>➕</span></div>
-            <div class="product__question">How to use<span>➕</span></div>
-            <div class="product__question">How to use<span>➕</span></div>
-          </div>
+        <div class="grid__col">
+          <div class="grid__img"></div>
+          <div class="grid__img"></div>
+        </div>
+        <div class="blog__post">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias modi
+            nobis voluptatum dolorem vitae minus odit quasi ducimus id aut,
+            repellat molestiae maxime ullam magni atque inventore praesentium
+            facere totam.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
   </body>
 </html>
