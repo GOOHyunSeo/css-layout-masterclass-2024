@@ -17,3 +17,7 @@ https://dribbble.com/shots/17000165-HAAN-sanitizers-products-pages/attachments/1
 ### Design Agency
 
 https://dribbble.com/shots/19627954-S-Studio-Website
+
+### Museum
+
+https://raw.githubusercontent.com/nomadcoders/css-layout-masterclass/master/projects/07.png
