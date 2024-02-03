@@ -21,3 +21,7 @@ https://dribbble.com/shots/19627954-S-Studio-Website
 ### Museum
 
 https://raw.githubusercontent.com/nomadcoders/css-layout-masterclass/master/projects/07.png
+
+### Error 404
+
+https://raw.githubusercontent.com/nomadcoders/css-layout-masterclass/dcae0a4590aec9cca03cd651194e1c76c46e6890/projects/07.png
