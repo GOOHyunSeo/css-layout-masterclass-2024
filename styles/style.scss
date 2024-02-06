@@ -1,185 +1,61 @@
 @import "./reset.scss";
 
-$green: #01ff00;
-$grey: #d9d9d9;
-$lightgrey: #f0f0f0;
-
-@keyframes x-slide {
-  0% {
-    transform: translateX(-25%);
-  }
-  50% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-25%);
-  }
-}
-@keyframes right-slide {
-  0% {
-    transform: translateY(8000%) rotate(90deg);
-  }
-  50% {
-    transform: translateY(0%) rotate(90deg);
-  }
-  100% {
-    transform: translateY(8000%) rotate(90deg);
-  }
-}
-@keyframes left-slide {
-  0% {
-    transform: translateY(-8000%) rotate(-90deg);
-  }
-  50% {
-    transform: translateY(0%) rotate(-90deg);
-  }
-  100% {
-    transform: translateY(-8000%) rotate(-90deg);
-  }
-}
+$white: #dee2d7;
+$green: #5fbd43;
 
 body {
-  position: relative;
-  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.poster {
+  width: 35%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 50px 1fr 50px;
-  grid-template-rows: 50px 1fr 50px;
-  background-color: black;
-  //   margin: 20px;
-}
-
-.bar {
-  background-color: $green;
-  //position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  &.top,
-  &.bottom {
-    grid-column: span 3;
-  }
-  &.top {
-    span {
-      animation: x-slide 20s linear infinite;
-    }
-  }
-  &.bottom {
-    transform: rotate(180deg);
-    span {
-      animation: x-slide 20s linear infinite;
-    }
-  }
-  &.left {
-    span {
-      animation: left-slide 20s linear infinite;
-    }
-  }
-  &.right {
-    span {
-      animation: right-slide 20s linear infinite;
-    }
-  }
-  span {
-    position: absolute;
-    width: max-content;
-    font-size: 18px;
-    font-weight: 600;
-  }
-}
-.square {
-  order: 2;
-  position: absolute;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $green;
-  height: 50px;
-  width: 50px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-main {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 1.4fr repeat(6, 1fr);
-  gap: 2px;
-  height: calc(100vh - 100px);
-  > div {
-    background-color: $grey;
-    &:has(img) {
-      padding: 20px;
-    }
-    img {
-      object-fit: cover;
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-    }
-    &:nth-child(5) {
-      grid-column: span 2;
-    }
-    &:nth-child(7) {
-      grid-row: span 4;
-      grid-column: span 2;
-      background-color: $lightgrey;
-    }
-    &:nth-child(8) {
-      grid-column: span 4;
-      background-color: $lightgrey;
-    }
-    &:nth-child(9) {
-      grid-column: span 2;
-      background-color: $lightgrey;
-    }
-    &:nth-child(10),
-    &:nth-child(11),
-    &:nth-child(12) {
-      grid-row: span 2;
-      grid-column: span 2;
-      background-color: $lightgrey;
-    }
-    &:nth-child(13) {
-      grid-row: span 2;
-      grid-column: span 4;
-      background-color: $lightgrey;
-    }
-    &:nth-child(14) {
-      grid-row: span 2;
-      grid-column: span 2;
-    }
-    // border-radius
-    &:nth-child(11) {
-      border-bottom-right-radius: 20px;
-    }
-    &:nth-child(12) {
-      border-bottom-left-radius: 20px;
-    }
-    &:nth-child(13) {
-      border-top-right-radius: 20px;
-    }
-    &:nth-child(14) {
-      border-top-left-radius: 20px;
-    }
-  }
-  .title {
-    grid-column: 1/-1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 112px;
-    font-weight: 600;
-  }
-  .nav-btn {
+  grid-template-rows: 35fr 65fr;
+  .top {
+    background-color: $green;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 70fr 30fr;
     padding: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 600;
+    gap: 30px;
+    .top__box {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 18px;
+      font-weight: 600;
+      h1 {
+        font-size: 130px;
+      }
+      &:last-child {
+        color: white;
+        font-size: 22px;
+        align-self: center;
+      }
+    }
+  }
+  .bottom {
+    overflow: hidden;
+    .circles {
+      transform: scale(1.1);
+      background-color: black;
+      display: grid;
+      height: 100%;
+      grid-template: repeat(11, 1fr) / repeat(11, 1fr);
+      gap: 8px;
+    }
+    .circle {
+      background-color: $green;
+      border-radius: 50%;
+      &:nth-child(2n) {
+        background-color: $white;
+      }
+    }
   }
 }

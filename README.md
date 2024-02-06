@@ -25,3 +25,7 @@ https://raw.githubusercontent.com/nomadcoders/css-layout-masterclass/master/proj
 ### Error 404
 
 https://raw.githubusercontent.com/nomadcoders/css-layout-masterclass/dcae0a4590aec9cca03cd651194e1c76c46e6890/projects/07.png
+
+### Pixies Poster
+
+https://www.swissted.com/products/pixies-at-the-rat-1986
