@@ -18,6 +18,10 @@ https://dribbble.com/shots/17000165-HAAN-sanitizers-products-pages/attachments/1
 
 https://dribbble.com/shots/19627954-S-Studio-Website
 
+### Architect Studio
+
+http://gowhastings.com/projects
+
 ### Museum
 
 https://raw.githubusercontent.com/nomadcoders/css-layout-masterclass/master/projects/07.png
