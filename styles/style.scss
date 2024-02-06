@@ -1,7 +1,9 @@
 @import "./reset.scss";
 
-$white: #dee2d7;
-$green: #5fbd43;
+$background: #dde2d2;
+$blue: #04a1c8;
+$red: #d03022;
+$mix: #583634;
 
 body {
   height: 100vh;
@@ -12,50 +14,72 @@ body {
 }
 
 .poster {
+  box-sizing: border-box;
   width: 35%;
   height: 100vh;
   display: grid;
-  grid-template-rows: 35fr 65fr;
-  .top {
-    background-color: $green;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 70fr 30fr;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 1fr 2.2fr 1fr 2fr 1fr 2.2fr 1fr;
+  background-color: $background;
+  padding: 20px;
+  .top-text,
+  h1,
+  .bottom-text {
     padding: 20px;
-    gap: 30px;
-    .top__box {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      font-size: 18px;
+    font-weight: 600;
+  }
+  .top-text,
+  .bottom-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .center-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    h1 {
+      font-size: 60px;
       font-weight: 600;
-      h1 {
-        font-size: 130px;
-      }
-      &:last-child {
-        color: white;
-        font-size: 22px;
-        align-self: center;
-      }
     }
   }
-  .bottom {
-    overflow: hidden;
-    .circles {
-      transform: scale(1.1);
-      background-color: black;
-      display: grid;
-      height: 100%;
-      grid-template: repeat(11, 1fr) / repeat(11, 1fr);
-      gap: 8px;
-    }
-    .circle {
-      background-color: $green;
-      border-radius: 50%;
-      &:nth-child(2n) {
-        background-color: $white;
-      }
-    }
+  .bottom-text {
+    justify-content: space-between;
   }
+
+  //   .bottom-text {
+  //     display: flex;
+  //     flex-direction: column;
+  //   }
+}
+
+// grid span
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  grid-row: span 2;
+}
+.center-left,
+.center-right {
+  grid-row: span 3;
+}
+
+// background-color
+.top-left,
+.top-right,
+.top-top,
+.center-bottom {
+  background-color: $blue;
+}
+.center-top,
+.bottom-left,
+.bottom-right,
+.bottom-bottom {
+  background-color: $red;
+}
+.center-left,
+.center-right {
+  background-color: $mix;
 }

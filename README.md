@@ -29,3 +29,7 @@ https://raw.githubusercontent.com/nomadcoders/css-layout-masterclass/dcae0a4590a
 ### Pixies Poster
 
 https://www.swissted.com/products/pixies-at-the-rat-1986
+
+### Concert Poster
+
+https://www.swissted.com/products/the-voidoids-at-cbgb-1978
